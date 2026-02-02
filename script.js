@@ -47,14 +47,14 @@ function renderCart() {
 
 // Add item to cart
 function addToCart(productId) {
-	let cart = getCartFromSession();
-	let product = products.find((p) => p.id === productId);
+  let cart = getCartFromSession(); 
+  let product = products.find((p) => p.id === productId);
 
-	if(product) {
-		cart.push(product);
-		saveCartToSession(cart);
-		renderCart();
-	}
+  if (product) {
+    cart.push(product);            
+    saveCartToSession(cart); 
+    renderCart();  
+  }
 }
 
 
